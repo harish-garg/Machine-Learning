@@ -25,3 +25,7 @@ clf.fit(train_data, train_target)
 
 print test_target
 print clf.predict(test_data)
+
+from sklearn.externals.six import StringIO
+with open('iris.dot', 'w') as f:
+    f = tree.export_graphviz(clf, out_file=f)
